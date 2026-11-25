@@ -1,0 +1,12 @@
+﻿family,method,crop_mode,shot,bacc_mean,bacc_seed_std,bacc_ep_ci95,mf1_mean,mf1_seed_std,mf1_ep_ci95,auroc_mean,auroc_seed_std,acc_mean,acc_seed_std
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + 4 giai đoạn (0-shot),1-crop-FT,0,56.987,0.0,0.0,49.78,0.0,0.0,87.339,0.0,54.93,0.0
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + ProtoNet (Visual Only),1-crop-FT,1,40.601,0.847,0.386,37.298,0.797,0.373,75.176,0.674,39.791,0.786
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + SAMP Đầy đủ,1-crop-FT,1,55.807,0.3,0.179,49.332,0.375,0.239,86.632,0.114,54.069,0.313
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + ProtoNet (Visual Only),1-crop-FT,5,54.011,0.173,0.226,51.7,0.213,0.236,85.128,0.12,52.5,0.191
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + SAMP Đầy đủ,1-crop-FT,5,59.007,0.121,0.138,53.321,0.152,0.177,88.572,0.037,57.478,0.16
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + ProtoNet (Visual Only),1-crop-FT,10,58.585,0.212,0.183,56.49,0.266,0.191,87.657,0.077,56.973,0.215
+Fine-Tuned ViT (Bảng riêng),FT-BiomedCLIP + SAMP Đầy đủ,1-crop-FT,10,60.226,0.08,0.142,55.748,0.105,0.167,89.182,0.057,58.757,0.108
+Fine-Tuned ViT (Bảng riêng),WiSE-FT (rho=0.55) + 4 giai đoạn (0-shot),1-crop-WiSE,0,62.001,0.0,0.0,55.987,0.0,0.0,87.928,0.0,60.563,0.0
+Fine-Tuned ViT (Bảng riêng),WiSE-FT (rho=0.55) + SAMP Đầy đủ,1-crop-WiSE,1,58.398,0.338,0.17,52.479,0.413,0.226,87.395,0.089,56.627,0.359
+Fine-Tuned ViT (Bảng riêng),WiSE-FT (rho=0.55) + SAMP Đầy đủ,1-crop-WiSE,5,60.132,0.137,0.139,54.987,0.158,0.173,88.865,0.037,58.567,0.184
+Fine-Tuned ViT (Bảng riêng),WiSE-FT (rho=0.55) + SAMP Đầy đủ,1-crop-WiSE,10,61.512,0.11,0.132,57.08,0.157,0.156,89.668,0.063,60.003,0.143

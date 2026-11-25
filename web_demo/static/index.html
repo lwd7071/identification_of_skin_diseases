@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ thống Phân tích Ảnh Da liễu Ít mẫu (BiomedCLIP + SAMP)</title>
+  <style>
+    :root {
+      --bg: #f6f7f8;
+      --surface: #ffffff;
+      --border: #d8dde3;
+      --text: #1c242b;
+      --muted: #5a6672;
+      --accent: #1f3a52;
+      --accent-soft: #eef3f7;
+      --warn-bg: #fdf6ec;
+      --warn-border: #d9a441;
+      --warn-text: #6e4b0c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 28px;
+    }
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    header h1 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    header .subtitle {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .disclaimer {
+      max-width: 1180px;
+      margin: 14px auto 0;
+      padding: 9px 14px;
+      background: var(--warn-bg);
+      border-left: 3px solid var(--warn-border);
+      color: var(--warn-text);
+      font-size: 0.84rem;
+    }
+    main {
+      max-width: 1180px;
+      margin: 16px auto 36px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 18px;
+    }
+    @media (max-width: 880px) {
+      main { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    .card h2 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent);
+    }
+    label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+    input[type="text"], textarea, input[type="file"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+      font-family: inherit;
+      background: #fff;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 9px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.92; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    button.secondary {
+      background: #fff;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    button.secondary:hover { background: var(--accent-soft); }
+    .sample-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .preview-box {
+      margin: 10px 0 12px;
+      border: 1px dashed var(--border);
+      border-radius: 4px;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafbfc;
+      overflow: hidden;
+    }
+    .preview-box img {
+      max-width: 100%;
+      max-height: 240px;
+      object-fit: contain;
+    }
+    .pred-item {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 11px 13px;
+      margin-bottom: 10px;
+    }
+    .pred-item.top1 {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .pred-head {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .bar-track {
+      height: 7px;
+      background: #e5e9ee;
+      border-radius: 3px;
+      margin: 6px 0;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--accent);
+    }
+    .stage-note {
+      font-size: 0.81rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .stage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 12px;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: #334155;
+    }
+    table.concept-tbl {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin-top: 6px;
+    }
+    table.concept-tbl th, table.concept-tbl td {
+      text-align: left;
+      padding: 6px 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 0.74rem;
+      border-radius: 3px;
+      background: #e2e8f0;
+      color: #1e293b;
+      margin-left: 6px;
+    }
+    .status-msg {
+      font-size: 0.84rem;
+      color: var(--accent);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Hệ thống Đối chiếu & Phân loại Ảnh Da liễu Ít mẫu (BiomedCLIP + Đa giai đoạn SAMP)</h1>
+      <span class="subtitle">Đề tài NCKH Sinh viên 2027 — Trường ĐH Công nghệ Kỹ thuật TP.HCM</span>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    <strong>Lưu ý y khoa:</strong> Chương trình chỉ phục vụ nghiên cứu học thuật và hỗ trợ tra cứu, sàng lọc dấu hiệu hình thái ban đầu; kết quả không thay thế chẩn đoán của bác sĩ chuyên khoa Da liễu.
+  </div>
+
+  <main>
+    <!-- Cột trái: Tải ảnh truy vấn & Đăng ký bệnh mới -->
+    <section>
+      <div class="card">
+        <h2>1. Tải ảnh tổn thương da cần phân tích</h2>
+        <label for="queryFile">Chọn tệp ảnh lâm sàng (JPG / PNG):</label>
+        <input type="file" id="queryFile" accept="image/*" />
+        <div class="preview-box" id="previewBox">
+          <span style="color:#7a8694;font-size:0.85rem;">Chưa chọn ảnh</span>
+        </div>
+        <button id="btnPredict" disabled>Phân tích ảnh & Đối chiếu giai đoạn</button>
+
+        <div style="margin-top:14px;">
+          <label>Hoặc chọn nhanh 1 ảnh test thuộc 6 lớp bệnh hiếm (Novel):</label>
+          <div class="sample-chips" id="sampleChips">Đang tải danh sách mẫu...</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2. Đăng ký thêm nhóm bệnh mới trực tiếp (1–5 ảnh mẫu)</h2>
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;">
+          Thử nghiệm Few-Shot Learning thời gian thực: tải lên 1–5 ảnh mẫu kèm mô tả ngắn để thêm lớp bệnh mới mà không cần huấn luyện lại mạng.
+        </p>
+        <label for="enrollId">Mã lớp tiếng Anh (ví dụ: Herpes_Zoster):</label>
+        <input type="text" id="enrollId" placeholder="Herpes_Zoster" />
+
+        <label for="enrollVi">Tên hiển thị tiếng Việt:</label>
+        <input type="text" id="enrollVi" placeholder="Bệnh Zona thần kinh" />
+
+        <label for="enrollDesc">Mô tả triệu chứng tiếng Anh (tùy chọn):</label>
+        <textarea id="enrollDesc" rows="2" placeholder="grouped painful vesicles on erythematous dermatomal band"></textarea>
+
+        <label for="enrollFiles">Chọn 1–5 ảnh mẫu hỗ trợ (Support Set):</label>
+        <input type="file" id="enrollFiles" accept="image/*" multiple />
+
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button id="btnEnroll">Đăng ký lớp bệnh mới</button>
+          <button class="secondary" id="btnReset">Xóa lớp tự thêm</button>
+        </div>
+        <div class="status-msg" id="enrollStatus"></div>
+      </div>
+    </section>
+
+    <!-- Cột phải: Kết quả dự đoán, Giai đoạn bệnh & Dấu hiệu SKINCON -->
+    <section>
+      <div class="card">
+        <h2>3. Kết quả dự đoán Top-3 & Giai đoạn tổn thương khớp nhất</h2>
+        <div id="warnBanner" style="display:none;margin-bottom:10px;padding:8px 11px;background:#fef2f2;border-left:3px solid #b91c1c;color:#7f1d1d;font-size:0.83rem;">
+          Độ tự tin của dự đoán cao nhất đang dưới 35%. Ảnh có thể mờ, thiếu sáng hoặc thuộc mặt bệnh ngoài danh mục — cần kiểm tra trực tiếp bởi bác sĩ.
+        </div>
+        <div id="predContainer" style="color:var(--muted);font-size:0.88rem;">
+          Vui lòng tải ảnh hoặc bấm chọn một ảnh mẫu bên trái để xem phân tích.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>4. Các dấu hiệu hình thái lâm sàng phát hiện trên ảnh (Từ điển SKINCON)</h2>
+        <div id="conceptContainer" style="color:var(--muted);font-size:0.86rem;">
+          Chưa có dữ liệu phân tích.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentBlob = null;
+    const queryInput = document.getElementById("queryFile");
+    const previewBox = document.getElementById("previewBox");
+    const btnPredict = document.getElementById("btnPredict");
+    const predContainer = document.getElementById("predContainer");
+    const conceptContainer = document.getElementById("conceptContainer");
+    const warnBanner = document.getElementById("warnBanner");
+
+    function showPreview(blob) {
+      currentBlob = blob;
+      const url = URL.createObjectURL(blob);
+      previewBox.innerHTML = `<img src="${url}" alt="Ảnh truy vấn" />`;
+      btnPredict.disabled = false;
+    }
+
+    queryInput.addEventListener("change", (e) => {
+      if (e.target.files && e.target.files[0]) {
+        showPreview(e.target.files[0]);
+      }
+    });
+
+    async function loadMeta() {
+      const res = await fetch("/api/classes");
+      const data = await res.json();
+      const wrap = document.getElementById("sampleChips");
+      wrap.innerHTML = "";
+      (data.sample_tests || []).forEach((s, idx) => {
+        const b = document.createElement("button");
+        b.className = "secondary";
+        b.textContent = s.class_id.replace(/_/g, " ");
+        b.title = s.vi_name;
+        b.onclick = async () => {
+          const rImg = await fetch(`/api/sample_image/${idx}`);
+          const bl = await rImg.blob();
+          showPreview(bl);
+          runPredict();
+        };
+        wrap.appendChild(b);
+      });
+      document.getElementById("enrollStatus").textContent =
+        `Đang hoạt động: ${data.built_in_count} lớp gốc + ${data.custom_count} lớp tự thêm.`;
+    }
+
+    async function runPredict() {
+      if (!currentBlob) return;
+      btnPredict.disabled = true;
+      btnPredict.textContent = "Đang suy luận trên mô hình...";
+      const fd = new FormData();
+      fd.append("file", currentBlob, "query.jpg");
+      try {
+        const res = await fetch("/api/predict", { method: "POST", body: fd });
+        const data = await res.json();
+        warnBanner.style.display = data.low_confidence_warning ? "block" : "none";
+
+        predContainer.innerHTML = data.top_predictions.slice(0, 3).map((p, i) => {
+          const stgHtml = i === 0
+            ? `<div class="stage-grid">${p.stage_breakdown.map(st =>
+                `<div>• ${st.vi_label}: <strong>${st.weight_pct}%</strong></div>`
+              ).join("")}</div>`
+            : "";
+          const customTag = p.is_custom_enrolled ? `<span class="badge">Mới đăng ký</span>` : "";
+          return `
+            <div class="pred-item ${i === 0 ? "top1" : ""}">
+              <div class="pred-head">
+                <span>#${i + 1}. ${p.vi_name} <small style="color:#64748b">(${p.class_id})</small>${customTag}</span>
+                <span>${p.probability_pct.toFixed(1)}%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, p.probability_pct)}%"></div></div>
+              <div class="stage-note">Thể tổn thương khớp nhất: <strong>${p.matched_stage}</strong></div>
+              ${stgHtml}
+            </div>
+          `;
+        }).join("");
+
+        conceptContainer.innerHTML = `
+          <table class="concept-tbl">
+            <thead><tr><th>Dấu hiệu lâm sàng (SKINCON)</th><th>Mô tả chuẩn tiếng Anh</th><th>Độ tương đồng Cosine</th></tr></thead>
+            <tbody>
+              ${data.detected_skincon_concepts.map(c => `
+                <tr>
+                  <td><strong>${c.vi}</strong></td>
+                  <td style="color:#5a6672">${c.en}</td>
+                  <td>${c.cosine_score.toFixed(3)}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        `;
+      } catch (err) {
+        predContainer.textContent = "Lỗi khi phân tích ảnh: " + err;
+      } finally {
+        btnPredict.disabled = false;
+        btnPredict.textContent = "Phân tích ảnh & Đối chiếu giai đoạn";
+      }
+    }
+
+    btnPredict.addEventListener("click", runPredict);
+
+    document.getElementById("btnEnroll").addEventListener("click", async () => {
+      const cid = document.getElementById("enrollId").value.trim();
+      const vname = document.getElementById("enrollVi").value.trim();
+      const desc = document.getElementById("enrollDesc").value.trim();
+      const files = document.getElementById("enrollFiles").files;
+      const st = document.getElementById("enrollStatus");
+      if (!cid || !vname || !files.length) {
+        st.textContent = "Vui lòng nhập mã lớp, tên tiếng Việt và chọn ít nhất 1 ảnh mẫu.";
+        return;
+      }
+      const fd = new FormData();
+      fd.append("class_id", cid);
+      fd.append("vi_name", vname);
+      fd.append("clinical_description", desc);
+      for (let i = 0; i < files.length; i++) fd.append("files", files[i]);
+      st.textContent = "Đang trích xuất nguyên mẫu 5-crop & hiệu chỉnh phân phối...";
+      const res = await fetch("/api/enroll", { method: "POST", body: fd });
+      const data = await res.json();
+      if (res.ok) {
+        st.textContent = `Đã thêm lớp '${data.vi_name}' (${data.shot_count}-shot). Hiện có ${data.total_custom_classes} lớp tự thêm.`;
+      } else {
+        st.textContent = "Lỗi: " + (data.detail || "Không thể đăng ký");
+      }
+    });
+
+    document.getElementById("btnReset").addEventListener("click", async () => {
+      await fetch("/api/reset_enrolled", { method: "POST" });
+      loadMeta();
+    });
+
+    loadMeta();
+  </script>
+</body>
+</html>

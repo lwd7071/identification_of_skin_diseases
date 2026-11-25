@@ -1,0 +1,39 @@
+# 1. Môi trường ảo, cache, cấu hình IDE & file tạm hệ điều hành
+.venv/
+.cache/
+__pycache__/
+**/__pycache__/
+*.pyc
+.vscode/
+.idea/
+.env
+Thumbs.db
+.DS_Store
+
+# 2. Thư mục đóng gói riêng cho Google Drive, tài liệu hành chính & file tạm Office
+UPLOAD/
+Drive_Upload_NCKH_2027/
+docs/
+*.docx
+*.pdf
+*.xlsx
+~$*
+
+# 3. Các script nội bộ chỉ dùng để xuất biểu mẫu Word / đóng gói Drive
+src/step3_train_and_eval.py
+src/step4_generate_reports.py
+src/models.py
+src/build_tom_tat_1_trang.py
+src_v2/build_tom_tat_v2.py
+src_v2/build_drive_upload_folder.py
+src_v2/sync_bm01_and_clean_package.py
+src_v2/step6_plots_and_changelog.py
+src_v2/step7_complete_superset_exports.py
+
+# 4. Dữ liệu ảnh ngoài & ma trận đặc trưng dung lượng lớn (> 20MB)
+data_external/
+outputs/
+outputs_v2/features/
+outputs_v2/checkpoints/resnet50_protonet_5seeds.pt
+outputs_v2/CHANGELOG_V1_vs_V2.md
+outputs_v2/protected_files_sha256_lock.json

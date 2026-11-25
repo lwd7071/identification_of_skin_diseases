@@ -1,0 +1,200 @@
+{
+  "concepts_list": [
+    {"id": "erythema", "en": "clinical skin image showing erythema and localized redness", "vi": "Ban đỏ / Đỏ da khu trú"},
+    {"id": "papule", "en": "clinical skin image showing raised solid papules", "vi": "Sẩn gồ trên mặt da"},
+    {"id": "plaque", "en": "clinical skin image showing well-demarcated elevated plaques", "vi": "Mảng da dày giới hạn rõ"},
+    {"id": "pustule", "en": "clinical skin image showing purulent pustules and comedones", "vi": "Mụn mủ / Nhân mụn"},
+    {"id": "scale", "en": "clinical skin image showing silvery white or flaky scaling", "vi": "Vảy trắng bạc / Bong vảy"},
+    {"id": "vesicle_bulla", "en": "clinical skin image showing fluid-filled vesicles or tense bullae", "vi": "Mụn nước / Bọng nước căng"},
+    {"id": "crust_erosion", "en": "clinical skin image showing oozing, crusting, and superficial erosion", "vi": "Đóng vảy tiết / Trợt nông"},
+    {"id": "ulcer", "en": "clinical skin image showing skin ulceration or bleeding nodule", "vi": "Loét da / Nốt sùi chảy máu"},
+    {"id": "hyperpigmentation", "en": "clinical skin image showing brown or black hyperpigmented macules and patches", "vi": "Tăng sắc tố nâu/đen"},
+    {"id": "depigmentation", "en": "clinical skin image showing milky-white depigmented patches", "vi": "Mất sắc tố trắng sữa"},
+    {"id": "annular_border", "en": "clinical skin image showing annular ring-shaped plaque with active scaly border and central clearing", "vi": "Tổn thương hình nhẫn bờ có vảy"},
+    {"id": "verrucous", "en": "clinical skin image showing rough hyperkeratotic verrucous warty surface", "vi": "Bề mặt sần sùi tăng sừng"},
+    {"id": "stuck_on", "en": "clinical skin image showing waxy brown stuck-on hyperkeratotic lesion", "vi": "Mảng sừng nâu sáp như dán trên da"},
+    {"id": "telangiectasia", "en": "clinical skin image showing telangiectasia and visible dilated blood vessels", "vi": "Giãn mao mạch nông"},
+    {"id": "purpura", "en": "clinical skin image showing palpable purpura and petechial hemorrhagic spots", "vi": "Ban xuất huyết sờ thấy được"},
+    {"id": "asymmetry_border", "en": "clinical skin image showing asymmetrical pigmented lesion with irregular border and color variegation", "vi": "Tổn thương sắc tố bất đối xứng, bờ không đều"},
+    {"id": "facial_butterfly", "en": "clinical skin image showing malar erythema or photosensitive discoid rash", "vi": "Hồng ban nhạy cảm ánh sáng / Vùng má"},
+    {"id": "satellite_pustules", "en": "clinical skin image showing moist macerated erythema in skin folds with satellite pustules", "vi": "Mảng đỏ ẩm kẽ da kèm sẩn mủ vệ tinh"}
+  ],
+  "classes": {
+    "Unknown_Normal": {
+      "vi_name": "Da bình thường / Khác",
+      "prompts": [
+        "a clinical photograph of normal healthy human skin without pathological skin lesions",
+        "clear intact skin surface with uniform tone and no rash, ulcer, or tumor",
+        "unremarkable normal skin appearance"
+      ]
+    },
+    "Benign_tumors": {
+      "vi_name": "U da lành tính",
+      "prompts": [
+        "a clinical dermatological photograph of a benign skin tumor such as dermatofibroma, lipoma, or epidermal cyst",
+        "well-circumscribed smooth dome-shaped benign cutaneous nodule or skin tag",
+        "non-cancerous localized benign skin growth with regular borders"
+      ]
+    },
+    "Eczema": {
+      "vi_name": "Chàm (Viêm da cơ địa)",
+      "prompts": [
+        "a clinical dermatological photograph of eczema and atopic dermatitis",
+        "pruritic erythematous patches with weeping vesicles, crusting, scaling, and lichenification",
+        "inflamed dry itchy eczematous skin rash with poorly demarcated borders"
+      ]
+    },
+    "Tinea": {
+      "vi_name": "Nấm da (Dermatophytosis)",
+      "prompts": [
+        "a clinical dermatological photograph of superficial fungal tinea infection or ringworm",
+        "annular erythematous ring-shaped plaque with raised scaly advancing border and central clearing",
+        "dermatophytosis fungal skin rash with peripheral scaling"
+      ]
+    },
+    "Psoriasis": {
+      "vi_name": "Vảy nến",
+      "prompts": [
+        "a clinical dermatological photograph of plaque psoriasis",
+        "well-demarcated erythematous salmon-pink plaques covered with thick silvery-white scales",
+        "chronic psoriatic scaly plaques on extensor skin surfaces or scalp"
+      ]
+    },
+    "Actinic_Keratosis": {
+      "vi_name": "Dày sừng ánh sáng",
+      "prompts": [
+        "a clinical dermatological photograph of actinic keratosis on sun-exposed skin",
+        "rough gritty scaly erythematous or keratotic macule and papule caused by chronic UV damage",
+        "premalignant solar keratosis lesion with adherent dry yellow-white scale"
+      ]
+    },
+    "Vitiligo": {
+      "vi_name": "Bạch biến",
+      "prompts": [
+        "a clinical dermatological photograph of vitiligo",
+        "sharply demarcated milky-white depigmented macules and patches on the skin",
+        "complete loss of skin melanin pigment with convex hyperpigmented borders"
+      ]
+    },
+    "SkinCancer": {
+      "vi_name": "Ung thư da",
+      "prompts": [
+        "a clinical dermatological photograph of malignant skin cancer including melanoma, basal cell carcinoma, or squamous cell carcinoma",
+        "asymmetrical malignant skin tumor with irregular borders, ulceration, pearly telangiectatic rolled edge, or multicolor pigmentation",
+        "invasive cutaneous malignancy showing bleeding crusted nodule or atypical dark plaque"
+      ]
+    },
+    "Acne": {
+      "vi_name": "Mụn trứng cá",
+      "prompts": [
+        "a clinical dermatological photograph of acne vulgaris on face, chest, or back",
+        "inflammatory erythematous papules, pustules, nodules, and open or closed comedones",
+        "sebaceous follicular acne breakout with blackheads, whiteheads, and pimples"
+      ]
+    },
+    "Warts": {
+      "vi_name": "Mụn cóc (HPV)",
+      "prompts": [
+        "a clinical dermatological photograph of viral cutaneous warts (verruca vulgaris or plantar wart)",
+        "firm hyperkeratotic rough verrucous papule with pinpoint black thrombosed capillaries",
+        "cauliflower-like papillomatous skin wart caused by human papillomavirus"
+      ]
+    },
+    "Lichen": {
+      "vi_name": "Lichen phẳng",
+      "prompts": [
+        "a clinical dermatological photograph of lichen planus or lichen simplex",
+        "violaceous purple polygonal flat-topped pruritic papules with fine white Wickham striae",
+        "thickened lichenified violaceous plaques on wrists, ankles, or mucosa"
+      ]
+    },
+    "DrugEruption": {
+      "vi_name": "Phát ban do thuốc",
+      "prompts": [
+        "a clinical dermatological photograph of an adverse cutaneous drug eruption",
+        "widespread symmetrical morbilliform maculopapular erythematous rash triggered by medication",
+        "acute fixed drug eruption or exanthematous erythematous skin reaction"
+      ]
+    },
+    "Vascular_Tumors": {
+      "vi_name": "U mạch máu da",
+      "prompts": [
+        "a clinical dermatological photograph of a cutaneous vascular tumor, hemangioma, or pyogenic granuloma",
+        "bright red to purple lobulated vascular nodule or port-wine stain malformation on skin",
+        "blood-vessel-rich erythematous violaceous vascular skin lesion"
+      ]
+    },
+    "Infestations_Bites": {
+      "vi_name": "Ký sinh trùng & Côn trùng đốt",
+      "prompts": [
+        "a clinical dermatological photograph of arthropod insect bites or scabies skin infestation",
+        "clustered pruritic erythematous urticarial papules with central punctum or linear burrows",
+        "parasitic cutaneous bite reaction with excoriated itchy red bumps"
+      ]
+    },
+    "Bullous": {
+      "vi_name": "Bệnh da bọng nước",
+      "prompts": [
+        "a clinical dermatological photograph of autoimmune bullous skin disease such as bullous pemphigoid or pemphigus",
+        "large tense fluid-filled blisters and flaccid bullae with denuded crusted skin erosions",
+        "blistering vesiculobullous dermatosis on erythematous or normal skin"
+      ]
+    },
+    "Vasculitis": {
+      "vi_name": "Viêm mạch máu ngoài da",
+      "prompts": [
+        "a clinical dermatological photograph of cutaneous leukocytoclastic vasculitis",
+        "non-blanching palpable purpura, petechiae, and hemorrhagic necrotic macules on lower extremities",
+        "inflammatory small-vessel cutaneous vasculitis with purpuric violaceous spots"
+      ]
+    },
+    "Seborrh_Keratoses": {
+      "vi_name": "Dày sừng tiết bã",
+      "prompts": [
+        "a clinical dermatological photograph of seborrheic keratosis",
+        "well-demarcated brown to black waxy verrucous plaque with a characteristic stuck-on appearance",
+        "benign hyperkeratotic pigmented epidermal lesion with horn cysts and fissured surface"
+      ]
+    },
+    "Moles": {
+      "vi_name": "Nốt ruồi lành tính (Nevus)",
+      "prompts": [
+        "a clinical dermatological photograph of a benign melanocytic nevus or common mole",
+        "symmetrical round or oval uniformly tan-brown pigmented macule or papule with smooth regular borders",
+        "circumscribed benign pigmented skin mole"
+      ]
+    },
+    "Sun_Sunlight_Damage": {
+      "vi_name": "Tổn thương da do ánh nắng",
+      "prompts": [
+        "a clinical dermatological photograph of chronic sun damage, photodamage, solar lentigo, or sunburn",
+        "mottled hyperpigmentation, solar elastosis, freckling, telangiectasia, and UV-induced erythema on sun-exposed skin",
+        "actinic photoaged skin with sunspots and UV radiation damage"
+      ]
+    },
+    "Lupus": {
+      "vi_name": "Lupus ban đỏ ở da",
+      "prompts": [
+        "a clinical dermatological photograph of cutaneous lupus erythematosus",
+        "photosensitive butterfly malar erythema or discoid erythematous scaly plaques with follicular plugging and central atrophy",
+        "autoimmune lupus skin rash on sun-exposed face, scalp, or ears"
+      ]
+    },
+    "Rosacea": {
+      "vi_name": "Chứng đỏ mặt (Rosacea)",
+      "prompts": [
+        "a clinical dermatological photograph of facial rosacea",
+        "persistent centrofacial erythema, flushing, telangiectasia, and inflammatory papulopustules without comedones on cheeks and nose",
+        "chronic rosacea with redness, visible blood vessels, or rhinophyma"
+      ]
+    },
+    "Candidiasis": {
+      "vi_name": "Nhiễm nấm Candida da",
+      "prompts": [
+        "a clinical dermatological photograph of cutaneous candidiasis yeast infection",
+        "beefy-red moist macerated intertriginous plaque in skin folds surrounded by characteristic satellite papules and pustules",
+        "superficial Candida fungal skin rash with peripheral scaling and satellite lesions"
+      ]
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "stage_definitions": [
+    {
+      "id": "acute_wet",
+      "vi_label": "Thể cấp tính / Sưng đỏ / Rỉ dịch ướt",
+      "description": "Giai đoạn khởi phát hoặc đợt bùng phát cấp tính với ban đỏ rực, phù nề, mụn nước, bọng nước hoặc rỉ dịch huyết thanh ẩm ướt."
+    },
+    {
+      "id": "subacute_crust",
+      "vi_label": "Thể bán cấp / Se mặt / Đóng vảy tiết (mài)",
+      "description": "Giai đoạn chuyển tiếp bán cấp khi mụn nước vỡ se mặt, đóng mài vàng/nâu hoặc bong vảy mỏng trên nền hồng ban."
+    },
+    {
+      "id": "chronic_dry",
+      "vi_label": "Thể mạn tính / Khô ráp / Bong vảy dày / Dày sừng",
+      "description": "Giai đoạn tiến triển mạn tính với da khô ráp, bong vảy dày, dày sừng, liken hóa hằn cổ trâu hoặc biến đổi sắc tố dai dẳng."
+    },
+    {
+      "id": "secondary_diff",
+      "vi_label": "Thể cào xước, loét thứ phát & Dấu hiệu phân biệt vị trí",
+      "description": "Tổn thương biến đổi do cào gãi trầy xước, nứt nẻ, trợt loét, bội nhiễm kèm vị trí giải phẫu điển hình giúp phân biệt chẩn đoán."
+    }
+  ],
+  "classes": {
+    "Unknown_Normal": {
+      "vi_name": "Da bình thường / Không tổn thương đặc hiệu",
+      "stages": {
+        "acute_wet": "clinical photograph of normal healthy human skin with smooth intact epidermis and uniform physiological skin tone without rash",
+        "subacute_crust": "unremarkable healthy skin surface showing normal pores, fine skin lines, and absence of erythema, crust, or scaling",
+        "chronic_dry": "clear normal cutaneous surface with intact barrier, slightly dry physiological texture but no pathological plaque or tumor",
+        "secondary_diff": "normal anatomical skin region on face, trunk, or limbs without dermatological disease, ulceration, or inflammation"
+      }
+    },
+    "Benign_tumors": {
+      "vi_name": "U da lành tính (Nang thượng bì, U xơ bì, U mỡ)",
+      "stages": {
+        "acute_wet": "clinical photograph of an inflamed benign cutaneous cyst or benign skin nodule with smooth dome-shaped flesh-colored surface",
+        "subacute_crust": "well-circumscribed benign epidermal inclusion cyst with central punctum or soft pedunculated acrochordons skin tags",
+        "chronic_dry": "firm hyperpigmented dimpled dermatofibroma nodule or slow-growing subcutaneous lipoma with intact overlying skin",
+        "secondary_diff": "solitary symmetrical non-malignant skin growth or sebaceous hyperplasia papule with regular borders and no invasive ulceration"
+      }
+    },
+    "Eczema": {
+      "vi_name": "Chàm / Viêm da cơ địa (Eczema)",
+      "stages": {
+        "acute_wet": "acute weeping eczematous dermatitis with intensely pruritic erythematous patches, clustered microvesicles, and serous oozing exudate",
+        "subacute_crust": "subacute eczema showing erythematous papules and plaques with yellowish serous crusting, flaking, and partially healed erosions",
+        "chronic_dry": "chronic atopic dermatitis with dry thickened lichenified skin plaques, accentuated skin markings, hyperkeratosis, and xerosis",
+        "secondary_diff": "excoriated itchy eczematous rash in flexural creases, hands, or neck with linear scratch marks, painful fissures, and impetiginized crust"
+      }
+    },
+    "Tinea": {
+      "vi_name": "Nấm da nông (Hắc lào / Nấm thân / Nấm chân)",
+      "stages": {
+        "acute_wet": "acute inflammatory dermatophyte tinea infection with erythematous vesicular advancing border and moist interdigital maceration",
+        "subacute_crust": "annular ringworm tinea corporis plaque with active raised scaly erythematous edge and paler central clearing",
+        "chronic_dry": "chronic moccasin-type tinea pedis or tinea cruris showing diffuse dry powdery scaling, hyperkeratosis, and well-defined margin",
+        "secondary_diff": "pruritic superficial fungal skin infection with concentric scaly rings, scratched border, or tinea incognito on trunk, groin, or feet"
+      }
+    },
+    "Psoriasis": {
+      "vi_name": "Vảy nến (Psoriasis)",
+      "stages": {
+        "acute_wet": "acute guttate or pustular psoriasis flare with bright salmon-red drop-like papules and sterile pustules on erythematous skin",
+        "subacute_crust": "developing psoriatic plaques with sharply demarcated erythematous base and adherent micaceous flaky scales",
+        "chronic_dry": "chronic plaque psoriasis vulgaris featuring thick silvery-white layered hyperkeratotic scales over well-circumscribed red plaques",
+        "secondary_diff": "psoriatic lesions on extensor elbows, knees, scalp, or nails with pinpoint Auspitz bleeding spots after scratching off scales"
+      }
+    },
+    "Actinic_Keratosis": {
+      "vi_name": "Dày sừng ánh sáng (Actinic Keratosis)",
+      "stages": {
+        "acute_wet": "erythematous inflamed actinic keratosis macule with tender red base and thin fragile surface on sun-exposed skin",
+        "subacute_crust": "solar keratosis lesion covered by adherent rough yellow-brown keratotic crust and gritty sandpaper-like scale",
+        "chronic_dry": "chronic hyperkeratotic actinic keratosis or cutaneous horn with hard dry thick adherent scale on chronically photodamaged skin",
+        "secondary_diff": "multiple rough scaly premalignant solar keratoses on bald scalp, forehead, nose, ears, or dorsal forearms of fair photoaged skin"
+      }
+    },
+    "Vitiligo": {
+      "vi_name": "Bạch biến (Vitiligo)",
+      "stages": {
+        "acute_wet": "early progressing vitiligo showing hypopigmented trichrome macules transitioning into chalk-white amelanotic skin patches",
+        "subacute_crust": "sharply demarcated milky-white depigmented skin patches with smooth non-scaly intact epidermis",
+        "chronic_dry": "long-standing stable vitiligo with complete loss of melanin pigment, convex hyperpigmented borders, and white leukotrichia hairs",
+        "secondary_diff": "symmetrical autoimmune depigmented white patches around eyes, mouth, fingers, wrists, or knees occasionally with mild pink sunburn erythema"
+      }
+    },
+    "SkinCancer": {
+      "vi_name": "Ung thư da (BCC, SCC, Melanoma)",
+      "stages": {
+        "acute_wet": "ulcerated bleeding malignant skin tumor or nodular basal cell carcinoma with translucent pearly rolled border and surface oozing",
+        "subacute_crust": "invasive squamous cell carcinoma or rodent ulcer presenting as indurated erythematous nodule with central hemorrhagic crust",
+        "chronic_dry": "malignant melanoma or keratotic cutaneous carcinoma showing asymmetry, irregular notched borders, variegated black-brown-pink colors, and hyperkeratosis",
+        "secondary_diff": "destructive non-healing friable skin malignancy with arborizing telangiectasia, central crateriform ulceration, and crusted necrotic eschar"
+      }
+    },
+    "Acne": {
+      "vi_name": "Mụn trứng cá (Acne Vulgaris)",
+      "stages": {
+        "acute_wet": "acute inflammatory acne breakout with tender erythematous papules, yellow-headed pustules, and deep fluctuant nodulocystic lesions",
+        "subacute_crust": "papulopustular acne vulgaris with ruptured crusted pimples, open blackhead comedones, and closed whitehead comedones",
+        "chronic_dry": "persistent comedonal and post-inflammatory acne showing sebaceous follicular plugging, post-acne erythema, and hyperpigmented macules",
+        "secondary_diff": "excoriated acne on face, jawline, chest, or upper back with picked crusted lesions, icepick or boxcar atrophic acne scars"
+      }
+    },
+    "Warts": {
+      "vi_name": "Mụn cóc virus HPV (Verruca)",
+      "stages": {
+        "acute_wet": "clusters of moist filiform or macerated viral HPV warts and condylomatous papillomas with fleshy finger-like projections",
+        "subacute_crust": "verruca vulgaris papule with rough pebble-like papillomatous surface and tiny black dots of thrombosed capillaries",
+        "chronic_dry": "thick hyperkeratotic plantar wart or chronic flat verruca plana with firm calloused collar and dry verrucous surface",
+        "secondary_diff": "periungual or palmar viral warts on fingers, hands, or soles showing fissured rough keratotic surface after paring or scratching"
+      }
+    },
+    "Lichen": {
+      "vi_name": "Lichen phẳng / Lichen đơn mạn tính",
+      "stages": {
+        "acute_wet": "eruptive cutaneous lichen planus with shiny violaceous purple flat-topped polygonal papules and intense pruritus",
+        "subacute_crust": "violaceous lichenoid plaques displaying fine lacy white Wickham striae and adherent thin whitish scale",
+        "chronic_dry": "hypertrophic lichen planus or lichen simplex chronicus with thick leathery hyperkeratotic brownish-purple plaques",
+        "secondary_diff": "excoriated pruritic lichenoid lesions on flexor wrists, shins, ankles, or oral mucosa with linear Koebner scratch phenomenon and post-inflammatory hyperpigmentation"
+      }
+    },
+    "DrugEruption": {
+      "vi_name": "Phát ban da do dị ứng thuốc",
+      "stages": {
+        "acute_wet": "acute widespread morbilliform exanthematous drug eruption with bright confluent erythematous macules, papules, or blistering reaction",
+        "subacute_crust": "resolving maculopapular drug rash or dusky violaceous round fixed drug eruption plaque with central blister or crust",
+        "chronic_dry": "post-exanthematous desquamating drug reaction with diffuse flaky peeling skin and residual violaceous-brown hyperpigmented patch",
+        "secondary_diff": "symmetrical medication-induced cutaneous hypersensitivity rash across trunk and extremities with pruritic scratched erythema"
+      }
+    },
+    "Vascular_Tumors": {
+      "vi_name": "U máu & Dị dạng mạch máu da",
+      "stages": {
+        "acute_wet": "friable bright-red lobulated pyogenic granuloma vascular papule that bleeds easily with moist eroded hemorrhagic surface",
+        "subacute_crust": "proliferating infantile strawberry hemangioma or cherry angioma presenting as compressible crimson-red vascular nodule with focal crust",
+        "chronic_dry": "involuting vascular tumor, flat violaceous port-wine stain capillary malformation, or dark blue-purple venous lake on skin",
+        "secondary_diff": "well-demarcated blood-filled vascular cutaneous lesion with collarette of scale or superficial ulceration on head, lips, fingers, or trunk"
+      }
+    },
+    "Infestations_Bites": {
+      "vi_name": "Côn trùng đốt & Ghẻ ký sinh trùng",
+      "stages": {
+        "acute_wet": "acute arthropod insect bite reaction with edematous erythematous urticarial wheals, central punctum, or tense pruritic bullae",
+        "subacute_crust": "scabies infestation or papular urticaria showing clustered erythematous papules, serpiginous burrows, and pinpoint hemorrhagic crusts",
+        "chronic_dry": "persistent nodular scabies or chronic bite nodules with firm itchy brownish-red indurated papules and dry scaling",
+        "secondary_diff": "heavily excoriated scratched insect bites or interdigital web-space scabies burrows with secondary impetigo crusting"
+      }
+    },
+    "Bullous": {
+      "vi_name": "Bệnh da bọng nước tự miễn (Pemphigus / Pemphigoid)",
+      "stages": {
+        "acute_wet": "acute autoimmune bullous dermatosis featuring large tense clear or hemorrhagic fluid-filled bullae and fragile flaccid blisters",
+        "subacute_crust": "ruptured pemphigus or bullous pemphigoid blisters leaving raw moist bright-red denuded erosions and thick honey-brown crusts",
+        "chronic_dry": "healing vesiculobullous plaques with peripheral epidermal collarette peeling, dry re-epithelializing patches, and dyspigmentation",
+        "secondary_diff": "widespread painful crusted skin erosions and Nikolsky-positive fragile blisters on erythematous urticarial base across trunk, limbs, or oral mucosa"
+      }
+    },
+    "Vasculitis": {
+      "vi_name": "Viêm mạch máu ngoài da (Cutaneous Vasculitis)",
+      "stages": {
+        "acute_wet": "acute leukocytoclastic vasculitis flare with crops of non-blanching dark-red palpable purpura, hemorrhagic vesicles, and ankle edema",
+        "subacute_crust": "necrotic purpuric macules and coalescing hemorrhagic plaques covered with dark eschar and hemorrhagic crusting",
+        "chronic_dry": "resolving cutaneous small-vessel vasculitis leaving hemosiderin brownish-purple staining, livedo reticularis, and atrophic scars",
+        "secondary_diff": "gravity-dependent symmetrical palpable purpura and punched-out necrotic ulcers predominantly on lower legs and ankles"
+      }
+    },
+    "Seborrh_Keratoses": {
+      "vi_name": "Dày sừng tiết bã (Seborrheic Keratosis)",
+      "stages": {
+        "acute_wet": "irritated inflamed seborrheic keratosis with erythematous halo and slightly oozing friable verrucous surface after friction",
+        "subacute_crust": "tan to dark-brown waxy stuck-on epidermal papule or plaque with greasy keratin plugs and crumbly crusted surface",
+        "chronic_dry": "classic mature seborrheic keratosis showing sharply demarcated brown-black verrucous hyperkeratotic plaque with horn pseudocysts and cerebriform fissures",
+        "secondary_diff": "multiple benign pasted-on warty pigmented plaques on temple, face, chest, or back of older adults with dull waxy surface distinct from smooth nevus"
+      }
+    },
+    "Moles": {
+      "vi_name": "Nốt ruồi sắc tố lành tính (Melanocytic Nevus)",
+      "stages": {
+        "acute_wet": "benign halo nevus or mildly irritated junctional melanocytic nevus with symmetrical round pink-tan rim and smooth intact surface",
+        "subacute_crust": "compound melanocytic nevus presenting as small round evenly pigmented light-to-dark brown dome-shaped papule",
+        "chronic_dry": "long-standing intradermal dermal nevus appearing as soft flesh-colored or tan dome-shaped papule sometimes with terminal hairs",
+        "secondary_diff": "solitary small symmetrical round or oval benign mole with uniform pigment network and sharp regular borders without waxy stuck-on keratin"
+      }
+    },
+    "Sun_Sunlight_Damage": {
+      "vi_name": "Tổn thương da do ánh nắng (Photodamage / Solar Lentigo)",
+      "stages": {
+        "acute_wet": "acute UV sunburn reaction showing diffuse tender erythema, edema, and superficial sunburn blistering peeling within sun-exposed borders",
+        "subacute_crust": "peeling desquamating sunburned skin transitioning into mottled irregular tan-brown solar lentigines and actinic freckling",
+        "chronic_dry": "chronic dermatoheliosis photoaging with coarse deep rhytids wrinkles, yellowish leathery solar elastosis, and flat brown liver spots",
+        "secondary_diff": "poikiloderma of Civatte on lateral neck, V-chest, shoulders, and dorsal hands showing mottled brown dyspigmentation and fine telangiectasia without malar butterfly plaque or pustules"
+      }
+    },
+    "Lupus": {
+      "vi_name": "Lupus ban đỏ ở da (Cutaneous Lupus Erythematosus)",
+      "stages": {
+        "acute_wet": "acute cutaneous lupus erythematosus presenting with photosensitive edematous butterfly malar erythema across cheeks and nasal bridge while sparing nasolabial folds",
+        "subacute_crust": "subacute cutaneous lupus annular polycyclic or psoriasiform erythematous scaly plaques on sun-exposed upper trunk and arms",
+        "chronic_dry": "chronic discoid lupus erythematosus coin-shaped plaques with adherent carpet-tack follicular keratin plugs, central pale depressed atrophy, and scarring alopecia",
+        "secondary_diff": "autoimmune lupus skin lesions on malar cheeks, conchal bowl of ears, or scalp showing dyspigmented atrophic central scarring and violaceous active border without comedones or pustules"
+      }
+    },
+    "Rosacea": {
+      "vi_name": "Trứng cá đỏ / Đỏ mặt mạn tính (Rosacea)",
+      "stages": {
+        "acute_wet": "acute papulopustular rosacea flare with persistent bright centrofacial flushing erythema and crops of inflammatory papules and pinpoint pustules without blackheads",
+        "subacute_crust": "erythematotelangiectatic rosacea on convex cheeks, nose, chin, and central forehead with prominent dilated branching telangiectasia blood vessels",
+        "chronic_dry": "chronic phymatous rosacea and rhinophyma featuring bulbous thickened sebaceous skin, enlarged pores, and persistent redness on the nose",
+        "secondary_diff": "sensitive burning centrofacial redness with visible spider capillaries and acneiform pustules affecting nasolabial area and nose without follicular atrophy or scaling"
+      }
+    },
+    "Candidiasis": {
+      "vi_name": "Nhiễm nấm men Candida ở da (Cutaneous Candidiasis)",
+      "stages": {
+        "acute_wet": "acute intertriginous cutaneous candidiasis showing bright beefy-red weeping moist macerated erythema deep inside warm skin folds",
+        "subacute_crust": "eroded candidal intertrigo bordered by ragged peeling epidermal collarette scale and characteristic pinpoint satellite papulopustules",
+        "chronic_dry": "chronic candidal paronychia nail-fold swelling, angular cheilitis lip-corner fissures, or whitish curd-like Thrush pseudomembranous plaques",
+        "secondary_diff": "macerated itchy burning red fungal rash in axillary, inframammary, groin, or diaper folds distinguished by small discrete satellite pustules outside the main margin"
+      }
+    }
+  }
+}

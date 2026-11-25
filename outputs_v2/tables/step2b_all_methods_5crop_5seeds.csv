@@ -1,0 +1,19 @@
+﻿family,method,crop_mode,shot,bacc_mean,bacc_seed_std,bacc_ep_ci95,mf1_mean,mf1_seed_std,mf1_ep_ci95,auroc_mean,auroc_seed_std,acc_mean,acc_seed_std
+Zero-Shot (5-crop),BiomedCLIP Zero-Shot (Chỉ tên bệnh),5-crop,0,40.598,0.0,0.0,38.002,0.0,0.0,73.173,0.0,43.192,0.0
+Zero-Shot (5-crop),BiomedCLIP Zero-Shot (Triệu chứng gộp V1),5-crop,0,47.381,0.0,0.0,44.7,0.0,0.0,84.306,0.0,47.887,0.0
+Zero-Shot (5-crop),SAMP Zero-Shot (4 giai đoạn + Prior De-biasing),5-crop,0,55.05,0.0,0.0,47.908,0.0,0.0,87.095,0.0,53.991,0.0
+Baseline (5-crop),ResNet-50 + ProtoNet,5-crop,1,30.617,0.75,0.365,26.581,0.776,0.365,68.352,0.889,29.969,0.805
+Baseline (5-crop),ResNet-50 + SimpleShot,5-crop,1,33.062,0.554,0.351,31.013,0.478,0.336,67.971,0.423,33.244,0.537
+Baseline (5-crop),BiomedCLIP + ProtoNet (Visual Only),5-crop,1,39.7,0.647,0.39,36.685,0.639,0.381,75.087,0.522,38.926,0.576
+Baseline (5-crop),BiomedCLIP + SimpleShot (Centered Visual),5-crop,1,41.306,0.609,0.375,38.611,0.52,0.352,74.946,0.507,40.464,0.556
+Proposed (5-crop),SAMP Đầy đủ (4 giai đoạn + Centering + Calibration),5-crop,1,57.03,0.186,0.16,51.788,0.189,0.211,87.122,0.075,55.841,0.196
+Baseline (5-crop),ResNet-50 + ProtoNet,5-crop,5,44.64,1.078,0.289,42.228,0.982,0.28,79.541,0.632,44.073,0.894
+Baseline (5-crop),ResNet-50 + SimpleShot,5-crop,5,44.21,0.153,0.259,42.029,0.14,0.256,78.551,0.157,43.991,0.111
+Baseline (5-crop),BiomedCLIP + ProtoNet (Visual Only),5-crop,5,55.101,0.195,0.235,53.359,0.247,0.24,85.372,0.084,53.772,0.223
+Baseline (5-crop),BiomedCLIP + SimpleShot (Centered Visual),5-crop,5,54.164,0.236,0.22,51.443,0.269,0.232,85.03,0.089,52.849,0.247
+Proposed (5-crop),SAMP Đầy đủ (4 giai đoạn + Centering + Calibration),5-crop,5,59.119,0.109,0.15,54.802,0.153,0.186,88.659,0.027,57.854,0.168
+Baseline (5-crop),ResNet-50 + ProtoNet,5-crop,10,49.456,1.035,0.242,47.366,0.962,0.23,82.388,0.574,48.797,0.94
+Baseline (5-crop),ResNet-50 + SimpleShot,5-crop,10,48.921,0.266,0.226,47.008,0.245,0.221,81.79,0.103,48.445,0.24
+Baseline (5-crop),BiomedCLIP + ProtoNet (Visual Only),5-crop,10,60.202,0.18,0.181,58.589,0.254,0.188,87.909,0.078,58.668,0.209
+Baseline (5-crop),BiomedCLIP + SimpleShot (Centered Visual),5-crop,10,58.466,0.186,0.186,56.04,0.226,0.196,87.74,0.091,57.131,0.187
+Proposed (5-crop),SAMP Đầy đủ (4 giai đoạn + Centering + Calibration),5-crop,10,60.941,0.267,0.142,57.397,0.313,0.171,89.518,0.06,59.59,0.252

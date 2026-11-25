@@ -1,0 +1,15 @@
+﻿family,method,crop_mode,shot,bacc_mean,bacc_seed_std,bacc_ep_ci95,mf1_mean,mf1_seed_std,mf1_ep_ci95,auroc_mean,auroc_seed_std,acc_mean,acc_seed_std
+Hướng 2: VLM Zero-Shot,BiomedCLIP Zero-Shot (Chỉ tên bệnh),1-crop,0,41.14,0,0,38.262,0,0,73.934,0,43.662,0
+Hướng 2: VLM Zero-Shot,BiomedCLIP Zero-Shot (Triệu chứng gộp V1),1-crop,0,50.564,0,0,47.266,0,0,84.268,0,51.174,0
+Hướng 1: CNN Metric,ResNet-50 + ProtoNet (Episodic),1-crop,1,29.569,0.758,0.337,25.74,0.704,0.342,67.275,0.606,29.046,0.704
+Hướng 1: CNN Metric,ResNet-50 + SimpleShot (Centered),1-crop,1,32.256,0.5,0.332,30.404,0.447,0.317,67.266,0.405,32.583,0.487
+Hướng 3: VLM Visual FSL,BiomedCLIP + ProtoNet (Visual Only),1-crop,1,40.468,0.784,0.394,37.553,0.736,0.382,75.174,0.593,39.732,0.736
+Hướng 3: VLM Visual FSL,BiomedCLIP + SimpleShot (Centered Visual),1-crop,1,41.538,0.713,0.389,38.649,0.655,0.366,74.997,0.599,40.601,0.676
+Hướng 1: CNN Metric,ResNet-50 + ProtoNet (Episodic),1-crop,5,42.872,1.094,0.278,40.65,1.014,0.271,78.552,0.634,42.459,0.91
+Hướng 1: CNN Metric,ResNet-50 + SimpleShot (Centered),1-crop,5,42.881,0.199,0.264,40.86,0.137,0.261,77.938,0.146,42.871,0.146
+Hướng 3: VLM Visual FSL,BiomedCLIP + ProtoNet (Visual Only),1-crop,5,54.725,0.284,0.233,53.046,0.272,0.238,85.473,0.087,53.28,0.272
+Hướng 3: VLM Visual FSL,BiomedCLIP + SimpleShot (Centered Visual),1-crop,5,53.726,0.263,0.219,50.7,0.258,0.23,85.012,0.099,52.212,0.249
+Hướng 1: CNN Metric,ResNet-50 + ProtoNet (Episodic),1-crop,10,47.546,0.96,0.243,45.668,0.932,0.23,81.527,0.581,47.044,0.9
+Hướng 1: CNN Metric,ResNet-50 + SimpleShot (Centered),1-crop,10,47.382,0.211,0.228,45.623,0.189,0.222,81.225,0.098,47.151,0.192
+Hướng 3: VLM Visual FSL,BiomedCLIP + ProtoNet (Visual Only),1-crop,10,59.598,0.287,0.19,58.078,0.308,0.197,87.988,0.095,57.955,0.269
+Hướng 3: VLM Visual FSL,BiomedCLIP + SimpleShot (Centered Visual),1-crop,10,58.031,0.2,0.184,55.296,0.25,0.196,87.613,0.106,56.533,0.207

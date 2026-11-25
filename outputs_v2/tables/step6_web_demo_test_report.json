@@ -1,0 +1,68 @@
+{
+  "status": "ALL_5_TESTS_PASSED",
+  "sample_tested": "Seborrh_Keratoses",
+  "top1_before_enroll": {
+    "class_id": "Seborrh_Keratoses",
+    "vi_name": "Dày sừng tiết bã (Seborrheic Keratosis)",
+    "is_custom_enrolled": false,
+    "probability_pct": 28.34,
+    "matched_stage": "Thể mạn tính / Khô ráp / Bong vảy dày / Dày sừng",
+    "stage_breakdown": [
+      {
+        "stage_id": "acute_wet",
+        "vi_label": "Thể cấp tính / Sưng đỏ / Rỉ dịch ướt",
+        "weight_pct": 4.2
+      },
+      {
+        "stage_id": "subacute_crust",
+        "vi_label": "Thể bán cấp / Se mặt / Đóng vảy tiết (mài)",
+        "weight_pct": 7.3
+      },
+      {
+        "stage_id": "chronic_dry",
+        "vi_label": "Thể mạn tính / Khô ráp / Bong vảy dày / Dày sừng",
+        "weight_pct": 84.6
+      },
+      {
+        "stage_id": "secondary_diff",
+        "vi_label": "Thể cào xước, loét thứ phát & Dấu hiệu phân biệt vị trí",
+        "weight_pct": 3.8
+      }
+    ]
+  },
+  "top1_after_enroll": {
+    "class_id": "Test_Rare_Dermatosis",
+    "vi_name": "Bệnh da hiếm thử nghiệm",
+    "is_custom_enrolled": true,
+    "probability_pct": 43.37,
+    "matched_stage": "Thể mạn tính / Khô ráp / Bong vảy dày / Dày sừng",
+    "stage_breakdown": [
+      {
+        "stage_id": "acute_wet",
+        "vi_label": "Thể cấp tính / Sưng đỏ / Rỉ dịch ướt",
+        "weight_pct": 6.6
+      },
+      {
+        "stage_id": "subacute_crust",
+        "vi_label": "Thể bán cấp / Se mặt / Đóng vảy tiết (mài)",
+        "weight_pct": 7.2
+      },
+      {
+        "stage_id": "chronic_dry",
+        "vi_label": "Thể mạn tính / Khô ráp / Bong vảy dày / Dày sừng",
+        "weight_pct": 75.1
+      },
+      {
+        "stage_id": "secondary_diff",
+        "vi_label": "Thể cào xước, loét thứ phát & Dấu hiệu phân biệt vị trí",
+        "weight_pct": 11.1
+      }
+    ]
+  },
+  "top_skincon_concept": {
+    "id": "asymmetry_border",
+    "vi": "Tổn thương sắc tố bất đối xứng, bờ không đều",
+    "en": "clinical skin image showing asymmetrical pigmented lesion with irregular border and color variegation",
+    "cosine_score": 0.379
+  }
+}

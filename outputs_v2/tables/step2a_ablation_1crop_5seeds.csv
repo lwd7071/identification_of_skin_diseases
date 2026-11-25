@@ -1,0 +1,21 @@
+﻿family,method,crop_mode,shot,bacc_mean,bacc_seed_std,bacc_ep_ci95,mf1_mean,mf1_seed_std,mf1_ep_ci95,auroc_mean,auroc_seed_std,acc_mean,acc_seed_std,lupus_recall
+Zero-Shot 4 giai đoạn,ZS-A3: BiomedCLIP + 4 giai đoạn bệnh,1-crop,0,61.21,0.0,0.0,55.415,0.0,0.0,87.397,0.0,59.155,0.0,8.82
+Zero-Shot 4 giai đoạn,ZS-A4: BiomedCLIP + 4 giai đoạn + Prior De-biasing,1-crop,0,61.175,0.0,0.0,55.752,0.0,0.0,87.537,0.0,59.155,0.0,11.76
+Ablation 1-crop,A1. BiomedCLIP + ProtoNet (Chỉ ảnh),1-crop,1,40.468,0.784,0.394,37.553,0.736,0.382,75.174,0.593,39.732,0.736,17.65
+Ablation 1-crop,A2. + Mô tả triệu chứng 1 câu (V1),1-crop,1,52.746,0.363,0.228,49.425,0.367,0.277,85.496,0.189,52.62,0.328,17.65
+Ablation 1-crop,A3. + Đa nguyên mẫu 4 giai đoạn (ướt/mài/khô/xước),1-crop,1,58.486,0.207,0.182,53.37,0.208,0.23,87.037,0.1,56.567,0.192,8.82
+Ablation 1-crop,A4. + Khử thiên lệch từ vựng (Prior De-biasing),1-crop,1,58.047,0.302,0.19,53.493,0.317,0.239,87.14,0.085,56.316,0.304,17.65
+Ablation 1-crop,A5. + Dịch tâm mặt cầu (Base-Mean Centering),1-crop,1,58.047,0.302,0.19,53.493,0.317,0.239,87.14,0.085,56.316,0.304,17.65
+Ablation 1-crop,A6. SAMP Đầy đủ (+ Cache & Calibration),1-crop,1,59.452,0.203,0.162,54.615,0.212,0.204,87.469,0.071,57.553,0.21,17.65
+Ablation 1-crop,A1. BiomedCLIP + ProtoNet (Chỉ ảnh),1-crop,5,54.725,0.284,0.233,53.046,0.272,0.238,85.473,0.087,53.28,0.272,38.24
+Ablation 1-crop,A2. + Mô tả triệu chứng 1 câu (V1),1-crop,5,56.656,0.112,0.129,53.577,0.162,0.153,87.389,0.033,56.309,0.122,17.65
+Ablation 1-crop,A3. + Đa nguyên mẫu 4 giai đoạn (ướt/mài/khô/xước),1-crop,5,62.302,0.054,0.085,57.208,0.087,0.119,88.95,0.028,60.324,0.058,11.76
+Ablation 1-crop,A4. + Khử thiên lệch từ vựng (Prior De-biasing),1-crop,5,62.781,0.068,0.1,58.569,0.071,0.133,88.883,0.026,60.839,0.091,23.53
+Ablation 1-crop,A5. + Dịch tâm mặt cầu (Base-Mean Centering),1-crop,5,62.781,0.068,0.1,58.569,0.071,0.133,88.883,0.026,60.839,0.091,23.53
+Ablation 1-crop,A6. SAMP Đầy đủ (+ Cache & Calibration),1-crop,5,62.425,0.076,0.1,57.93,0.077,0.136,88.868,0.022,60.505,0.09,20.59
+Ablation 1-crop,A1. BiomedCLIP + ProtoNet (Chỉ ảnh),1-crop,10,59.598,0.287,0.19,58.078,0.308,0.197,87.988,0.095,57.955,0.269,38.24
+Ablation 1-crop,A2. + Mô tả triệu chứng 1 câu (V1),1-crop,10,57.307,0.162,0.096,54.151,0.192,0.111,87.731,0.031,56.91,0.159,17.65
+Ablation 1-crop,A3. + Đa nguyên mẫu 4 giai đoạn (ướt/mài/khô/xước),1-crop,10,62.583,0.048,0.071,57.509,0.07,0.101,89.279,0.03,60.536,0.057,11.76
+Ablation 1-crop,A4. + Khử thiên lệch từ vựng (Prior De-biasing),1-crop,10,63.262,0.06,0.075,59.179,0.092,0.097,89.184,0.03,61.227,0.059,23.53
+Ablation 1-crop,A5. + Dịch tâm mặt cầu (Base-Mean Centering),1-crop,10,62.376,0.133,0.123,58.47,0.138,0.146,89.75,0.066,60.651,0.118,17.65
+Ablation 1-crop,A6. SAMP Đầy đủ (+ Cache & Calibration),1-crop,10,62.639,0.106,0.115,58.566,0.115,0.141,89.831,0.062,60.914,0.105,17.65

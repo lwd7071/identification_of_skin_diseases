@@ -1,0 +1,257 @@
+{
+  "note": "Kiểm chứng ngoài miền sơ bộ (6 lớp tổn thương da chụp bằng điện thoại, chia tách theo patient_id, không tinh chỉnh lại siêu tham số).",
+  "total_images": 2298,
+  "unique_patients": 1373,
+  "class_mapping": {
+    "ACK": {
+      "full_name": "Actinic Keratosis (Dày sừng ánh sáng)",
+      "relation": "Tương ứng lớp Base 'Actinic_Keratosis' (khác thiết bị: ảnh điện thoại lâm sàng Brazil)"
+    },
+    "BCC": {
+      "full_name": "Basal Cell Carcinoma (Ung thư biểu mô tế bào đáy)",
+      "relation": "Lớp con chuyên biệt thuộc nhóm 'SkinCancer' (tách chi tiết 3 loại ung thư da)"
+    },
+    "MEL": {
+      "full_name": "Melanoma (U hắc tố ác tính)",
+      "relation": "Lớp con chuyên biệt thuộc nhóm 'SkinCancer' (tách chi tiết 3 loại ung thư da)"
+    },
+    "NEV": {
+      "full_name": "Melanocytic Nevus (Nốt ruồi sắc tố lành tính)",
+      "relation": "Tương ứng lớp Novel 'Moles' (cùng bản chất nốt ruồi sắc tố lành tính)"
+    },
+    "SCC": {
+      "full_name": "Squamous Cell Carcinoma (Ung thư biểu mô tế bào vảy)",
+      "relation": "Lớp con chuyên biệt thuộc nhóm 'SkinCancer' (tách chi tiết 3 loại ung thư da)"
+    },
+    "SEK": {
+      "full_name": "Seborrheic Keratosis (Dày sừng tiết bã)",
+      "relation": "Tương ứng lớp Novel 'Seborrh_Keratoses' (cùng bản chất dày sừng tiết bã lành tính)"
+    }
+  },
+  "results": [
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "BiomedCLIP Zero-Shot (Chỉ tên bệnh)",
+      "crop_mode": "patient-disjoint",
+      "shot": 0,
+      "bacc_mean": 35.188,
+      "bacc_seed_std": 1.257,
+      "bacc_ep_ci95": 1.101,
+      "mf1_mean": 29.729,
+      "mf1_seed_std": 1.159,
+      "mf1_ep_ci95": 1.016,
+      "auroc_mean": 76.957,
+      "auroc_seed_std": 0.515,
+      "acc_mean": 39.902,
+      "acc_seed_std": 0.669
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "BiomedCLIP Zero-Shot (Mô tả 1 câu)",
+      "crop_mode": "patient-disjoint",
+      "shot": 0,
+      "bacc_mean": 44.551,
+      "bacc_seed_std": 1.954,
+      "bacc_ep_ci95": 1.713,
+      "mf1_mean": 39.217,
+      "mf1_seed_std": 0.901,
+      "mf1_ep_ci95": 0.79,
+      "auroc_mean": 81.203,
+      "auroc_seed_std": 0.553,
+      "acc_mean": 48.15,
+      "acc_seed_std": 0.613
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "SAMP Zero-Shot (4 giai đoạn - khóa tham số)",
+      "crop_mode": "patient-disjoint",
+      "shot": 0,
+      "bacc_mean": 37.876,
+      "bacc_seed_std": 0.932,
+      "bacc_ep_ci95": 0.817,
+      "mf1_mean": 22.687,
+      "mf1_seed_std": 1.042,
+      "mf1_ep_ci95": 0.913,
+      "auroc_mean": 80.932,
+      "auroc_seed_std": 0.252,
+      "acc_mean": 23.479,
+      "acc_seed_std": 0.905
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "ResNet-50 + ProtoNet (Trained on SkinDisease)",
+      "crop_mode": "patient-disjoint",
+      "shot": 1,
+      "bacc_mean": 22.869,
+      "bacc_seed_std": 0.311,
+      "bacc_ep_ci95": 0.216,
+      "mf1_mean": 18.453,
+      "mf1_seed_std": 0.418,
+      "mf1_ep_ci95": 0.236,
+      "auroc_mean": 59.146,
+      "auroc_seed_std": 0.932,
+      "acc_mean": 24.042,
+      "acc_seed_std": 0.883
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "BiomedCLIP + ProtoNet (Visual Only)",
+      "crop_mode": "patient-disjoint",
+      "shot": 1,
+      "bacc_mean": 31.798,
+      "bacc_seed_std": 0.507,
+      "bacc_ep_ci95": 0.285,
+      "mf1_mean": 24.188,
+      "mf1_seed_std": 0.73,
+      "mf1_ep_ci95": 0.292,
+      "auroc_mean": 68.529,
+      "auroc_seed_std": 0.383,
+      "acc_mean": 29.242,
+      "acc_seed_std": 1.189
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "SAMP (4 giai đoạn + Centering + Calibration)",
+      "crop_mode": "patient-disjoint",
+      "shot": 1,
+      "bacc_mean": 39.343,
+      "bacc_seed_std": 0.999,
+      "bacc_ep_ci95": 0.16,
+      "mf1_mean": 25.508,
+      "mf1_seed_std": 1.144,
+      "mf1_ep_ci95": 0.219,
+      "auroc_mean": 81.48,
+      "auroc_seed_std": 0.305,
+      "acc_mean": 27.244,
+      "acc_seed_std": 1.386
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "ResNet-50 + ProtoNet (Trained on SkinDisease)",
+      "crop_mode": "patient-disjoint",
+      "shot": 5,
+      "bacc_mean": 30.828,
+      "bacc_seed_std": 1.25,
+      "bacc_ep_ci95": 0.203,
+      "mf1_mean": 26.741,
+      "mf1_seed_std": 1.076,
+      "mf1_ep_ci95": 0.196,
+      "auroc_mean": 67.297,
+      "auroc_seed_std": 1.388,
+      "acc_mean": 31.202,
+      "acc_seed_std": 1.051
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "BiomedCLIP + ProtoNet (Visual Only)",
+      "crop_mode": "patient-disjoint",
+      "shot": 5,
+      "bacc_mean": 43.894,
+      "bacc_seed_std": 0.939,
+      "bacc_ep_ci95": 0.222,
+      "mf1_mean": 37.03,
+      "mf1_seed_std": 1.044,
+      "mf1_ep_ci95": 0.227,
+      "auroc_mean": 79.882,
+      "auroc_seed_std": 0.358,
+      "acc_mean": 40.886,
+      "acc_seed_std": 0.867
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "SAMP (4 giai đoạn + Centering + Calibration)",
+      "crop_mode": "patient-disjoint",
+      "shot": 5,
+      "bacc_mean": 42.542,
+      "bacc_seed_std": 1.164,
+      "bacc_ep_ci95": 0.116,
+      "mf1_mean": 29.006,
+      "mf1_seed_std": 1.453,
+      "mf1_ep_ci95": 0.158,
+      "auroc_mean": 83.466,
+      "auroc_seed_std": 0.348,
+      "acc_mean": 30.746,
+      "acc_seed_std": 1.45
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "ResNet-50 + ProtoNet (Trained on SkinDisease)",
+      "crop_mode": "patient-disjoint",
+      "shot": 10,
+      "bacc_mean": 34.797,
+      "bacc_seed_std": 1.926,
+      "bacc_ep_ci95": 0.205,
+      "mf1_mean": 30.286,
+      "mf1_seed_std": 1.488,
+      "mf1_ep_ci95": 0.185,
+      "auroc_mean": 71.063,
+      "auroc_seed_std": 1.656,
+      "acc_mean": 34.76,
+      "acc_seed_std": 1.322
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "BiomedCLIP + ProtoNet (Visual Only)",
+      "crop_mode": "patient-disjoint",
+      "shot": 10,
+      "bacc_mean": 48.95,
+      "bacc_seed_std": 1.541,
+      "bacc_ep_ci95": 0.202,
+      "mf1_mean": 42.063,
+      "mf1_seed_std": 1.649,
+      "mf1_ep_ci95": 0.197,
+      "auroc_mean": 83.258,
+      "auroc_seed_std": 0.37,
+      "acc_mean": 45.646,
+      "acc_seed_std": 1.254
+    },
+    {
+      "family": "PAD-UFES-20 Cross-Domain",
+      "method": "SAMP (4 giai đoạn + Centering + Calibration)",
+      "crop_mode": "patient-disjoint",
+      "shot": 10,
+      "bacc_mean": 46.362,
+      "bacc_seed_std": 1.298,
+      "bacc_ep_ci95": 0.116,
+      "mf1_mean": 34.117,
+      "mf1_seed_std": 1.606,
+      "mf1_ep_ci95": 0.15,
+      "auroc_mean": 84.77,
+      "auroc_seed_std": 0.41,
+      "acc_mean": 35.71,
+      "acc_seed_std": 1.58
+    }
+  ],
+  "fitzpatrick_5shot_bacc": {
+    "Fitzpatrick I-II (Da sáng)": {
+      "ResNet-50 + ProtoNet": {
+        "mean": 38.55,
+        "std": 5.04
+      },
+      "BiomedCLIP + ProtoNet": {
+        "mean": 51.13,
+        "std": 1.56
+      },
+      "SAMP (Đề xuất)": {
+        "mean": 43.74,
+        "std": 2.29
+      }
+    },
+    "Fitzpatrick III-IV (Da trung bình)": {
+      "ResNet-50 + ProtoNet": {
+        "mean": 37.36,
+        "std": 2.51
+      },
+      "BiomedCLIP + ProtoNet": {
+        "mean": 51.68,
+        "std": 7.56
+      },
+      "SAMP (Đề xuất)": {
+        "mean": 39.63,
+        "std": 2.96
+      }
+    },
+    "Fitzpatrick V-VI (Da sẫm màu)": {}
+  },
+  "elapsed_seconds": 143.0
+}

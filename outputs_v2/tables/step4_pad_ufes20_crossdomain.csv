@@ -1,0 +1,13 @@
+﻿family,method,crop_mode,shot,bacc_mean,bacc_seed_std,bacc_ep_ci95,mf1_mean,mf1_seed_std,mf1_ep_ci95,auroc_mean,auroc_seed_std,acc_mean,acc_seed_std
+PAD-UFES-20 Cross-Domain,BiomedCLIP Zero-Shot (Chỉ tên bệnh),patient-disjoint,0,35.188,1.257,1.101,29.729,1.159,1.016,76.957,0.515,39.902,0.669
+PAD-UFES-20 Cross-Domain,BiomedCLIP Zero-Shot (Mô tả 1 câu),patient-disjoint,0,44.551,1.954,1.713,39.217,0.901,0.79,81.203,0.553,48.15,0.613
+PAD-UFES-20 Cross-Domain,SAMP Zero-Shot (4 giai đoạn - khóa tham số),patient-disjoint,0,37.876,0.932,0.817,22.687,1.042,0.913,80.932,0.252,23.479,0.905
+PAD-UFES-20 Cross-Domain,ResNet-50 + ProtoNet (Trained on SkinDisease),patient-disjoint,1,22.869,0.311,0.216,18.453,0.418,0.236,59.146,0.932,24.042,0.883
+PAD-UFES-20 Cross-Domain,BiomedCLIP + ProtoNet (Visual Only),patient-disjoint,1,31.798,0.507,0.285,24.188,0.73,0.292,68.529,0.383,29.242,1.189
+PAD-UFES-20 Cross-Domain,SAMP (4 giai đoạn + Centering + Calibration),patient-disjoint,1,39.343,0.999,0.16,25.508,1.144,0.219,81.48,0.305,27.244,1.386
+PAD-UFES-20 Cross-Domain,ResNet-50 + ProtoNet (Trained on SkinDisease),patient-disjoint,5,30.828,1.25,0.203,26.741,1.076,0.196,67.297,1.388,31.202,1.051
+PAD-UFES-20 Cross-Domain,BiomedCLIP + ProtoNet (Visual Only),patient-disjoint,5,43.894,0.939,0.222,37.03,1.044,0.227,79.882,0.358,40.886,0.867
+PAD-UFES-20 Cross-Domain,SAMP (4 giai đoạn + Centering + Calibration),patient-disjoint,5,42.542,1.164,0.116,29.006,1.453,0.158,83.466,0.348,30.746,1.45
+PAD-UFES-20 Cross-Domain,ResNet-50 + ProtoNet (Trained on SkinDisease),patient-disjoint,10,34.797,1.926,0.205,30.286,1.488,0.185,71.063,1.656,34.76,1.322
+PAD-UFES-20 Cross-Domain,BiomedCLIP + ProtoNet (Visual Only),patient-disjoint,10,48.95,1.541,0.202,42.063,1.649,0.197,83.258,0.37,45.646,1.254
+PAD-UFES-20 Cross-Domain,SAMP (4 giai đoạn + Centering + Calibration),patient-disjoint,10,46.362,1.298,0.116,34.117,1.606,0.15,84.77,0.41,35.71,1.58

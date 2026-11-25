@@ -1,0 +1,9 @@
+﻿setting,method,shot,overall_bacc_mean,overall_bacc_std,base_mca,novel_mca,harmonic_mean,harmonic_std
+22-way (Đủ 22 lớp),SAMP Zero-Shot (4 giai đoạn),0,27.09,0.0,19.79,46.56,27.77,0.0
+22-way (Đủ 22 lớp),ResNet-50 + ProtoNet,1,21.21,1.17,19.46,25.88,21.64,0.94
+22-way (Đủ 22 lớp),SAMP Đầy đủ (Đề xuất V2),1,30.18,0.12,22.0,52.02,30.86,0.06
+22-way (Đủ 22 lớp),ResNet-50 + ProtoNet,5,27.99,0.88,24.54,37.2,29.37,0.87
+22-way (Đủ 22 lớp),SAMP Đầy đủ (Đề xuất V2),5,31.56,0.07,22.52,55.64,32.05,0.05
+22-way (Đủ 22 lớp),ResNet-50 + ProtoNet,10,30.14,0.65,26.46,39.95,31.72,0.64
+22-way (Đủ 22 lớp),SAMP Đầy đủ (Đề xuất V2),10,34.57,0.06,26.02,57.36,35.79,0.05
+21-way (Bỏ Unknown_Normal),SAMP Đầy đủ (Đề xuất V2),5,31.56,0.07,21.93,55.65,31.45,0.04

@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-11-24T23:41:19+0700",
+  "paper_reference": "Yan, S., et al. (2025). Derm1M: A Million-scale Vision-Language Dataset Aligned with Clinical Ontology Knowledge for Dermatology. ICCV 2025 Highlight (arXiv:2503.14911v1).",
+  "huggingface_repositories": [
+    {
+      "repo_id": "redlessone/DermLIP_ViT-B-16",
+      "reachable": true,
+      "license": "cc-by-nc-4.0",
+      "gated": "auto",
+      "private": false,
+      "downloads": 3764,
+      "arxiv_tag": "arxiv:2503.14911",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "merges.txt",
+        "open_clip_config.json",
+        "open_clip_model.safetensors",
+        "open_clip_pytorch_model.bin",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ]
+    },
+    {
+      "repo_id": "redlessone/DermLIP_PanDerm-base-w-PubMed-256",
+      "reachable": true,
+      "license": "cc-by-nc-4.0",
+      "gated": "auto",
+      "private": false,
+      "downloads": 129,
+      "arxiv_tag": "arxiv:2503.14911",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "open_clip_config.json",
+        "open_clip_model.safetensors",
+        "open_clip_pytorch_model.bin",
+        "special_tokens_map.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.txt"
+      ]
+    }
+  ],
+  "hf_token_configured_in_env": false,
+  "execution_mode": "CACH_1_AUDIT_ONLY_NO_GATED_TOKEN",
+  "license_assessment": {
+    "spdx_id": "cc-by-nc-4.0",
+    "permitted_for_student_nckh": true,
+    "conditions": [
+      "Chỉ sử dụng cho mục đích nghiên cứu học thuật phi thương mại (Non-Commercial).",
+      "Bắt buộc trích dẫn bài báo gốc Derm1M / DermLIP (Yan et al., ICCV 2025).",
+      "Tải trọng số trên HuggingFace yêu cầu xác nhận điều khoản (gated: auto) kèm HF_TOKEN cá nhân."
+    ]
+  },
+  "pretraining_overlap_audit_vs_skindisease_dermnet": {
+    "direct_public_dataset_ingestion": [
+      "SCIN (6,518 cặp ảnh-văn bản, Mục 7.5 arXiv:2503.14911v1)",
+      "MSKCC / ISIC subset (10,619 cặp ảnh-văn bản, Mục 7.5 arXiv:2503.14911v1)"
+    ],
+    "other_pretraining_sources": [
+      "YouTube dermatology educational videos (Mục 7.1)",
+      "PubMed Open-Access figures & captions (Mục 7.2)",
+      "68 PDF educational textbooks & atlases extracted via PyMuPDF (Mục 7.3)",
+      "Medical forums Reddit / IIYI (Mục 7.4)"
+    ],
+    "direct_dermnet_ingestion": false,
+    "indirect_overlap_risk": "LOW_TO_MODERATE",
+    "scientific_recommendation": "Bài báo Derm1M không nạp trực tiếp bộ DermNet vào mục Public Dataset (chỉ nạp SCIN và MSKCC). Tuy nhiên, do Derm1M thu thập ảnh từ 68 tài liệu giáo trình PDF và video bài giảng YouTube, không thể loại trừ hoàn toàn khả năng một số ảnh lâm sàng kinh điển của DermNet được giảng viên trích dẫn lại trong slide/sách. Vì vậy, khi sử dụng DermLIP trong nghiên cứu tiếp theo, bắt buộc đặt ở nhóm 'Baseline tham chiếu phụ (Domain-Pretrained Reference)' chứ không gộp chung với các mô hình chưa từng thấy dữ liệu giáo trình da liễu."
+  }
+}
